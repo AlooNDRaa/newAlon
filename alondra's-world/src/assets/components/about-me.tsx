@@ -1,6 +1,7 @@
 import { LiaLinkedin } from 'react-icons/lia';
 import { FaGithub } from 'react-icons/fa';
 import Doodle from '../doodle/1.png'
+import ClipboardCopyButton from './ClipBoards';
 
 const AboutMe = () => {
   return (
@@ -15,7 +16,7 @@ const AboutMe = () => {
         Full stack web developer from Argentina       
          </p>
         </div>
-        <div className="mt-6 flex justify-center">
+        <div className="mt-5 flex justify-center">
           <button className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900">
            <a href="https://www.linkedin.com/in/alondra-gadea/" className='flex items-center gap-2' target="_blank" rel="noopener noreferrer">
            <LiaLinkedin size={20}/> Linkedin           
@@ -26,6 +27,9 @@ const AboutMe = () => {
            <FaGithub size={20}/> Github
             </a>
           </button>
+        </div>
+        <div className="flex justify-center w-full">
+        <ClipboardCopyButton/>
         </div>
         </div>
       </div>

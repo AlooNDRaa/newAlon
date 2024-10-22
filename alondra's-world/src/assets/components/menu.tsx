@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import { BiHome } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { IoLanguage } from "react-icons/io5";
-import { MdEmail, MdInvertColors, MdWork } from "react-icons/md";
+import { MdBook, MdInvertColors, MdWork } from "react-icons/md";
 
  const optionMenu = [
   {
@@ -18,9 +19,9 @@ import { MdEmail, MdInvertColors, MdWork } from "react-icons/md";
     },
     {
         id: 3,
-        name: "Contact",
+        name: "Trainings",
         path: "/contact",
-        icon: <MdEmail />,
+        icon: <MdBook />,
     },
     {
       id: 4,
@@ -40,10 +41,24 @@ const ChangueThemeFunction = () => {
 }
 
 
+
+
 const MyMenu = () => {
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
     return (
-      <div className="fixed top-0 left-0 w-full h-16 flex items-center justify-center font-manrope">
-        <ul className="flex items-center space-x-6 bg font-semibold">
+<div className={`fixed top-0 left-0 w-full h-16 flex items-center justify-center font-manrope ${isScrolled ? "bg-white backdrop-blur-sm m-2 p-2 border-lg bg-opacity-10 flex w-max justify-center ml-[20rem]" : ""}`}>
+<ul className="flex items-center space-x-6 font-semibold">
           {optionMenu.map((option) => (
             <li key={option.id}>
               <a className="flex items-center gap-2" href={option.path}>

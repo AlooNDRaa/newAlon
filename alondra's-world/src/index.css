@@ -2,4 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
+:root {
+    background-color: rgb(226 232 240);
+}
