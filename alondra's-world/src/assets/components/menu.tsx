@@ -57,8 +57,11 @@ const MyMenu = () => {
   }, []);
 
     return (
-<div className={`fixed top-0 left-0 w-full h-16 flex items-center justify-center font-manrope ${isScrolled ? "bg-white backdrop-blur-sm m-2 p-2 border-lg bg-opacity-10 flex w-max justify-center ml-[20rem]" : ""}`}>
-<ul className="flex items-center space-x-6 font-semibold">
+<div
+  className={`fixed top-0 left-0 w-full h-16 flex items-center justify-center font-manrope 
+  ${isScrolled ? "bg-white left-[25%] p-6 backdrop-blur-sm m-2 rounded-xl border border-slate-500 bg-opacity-10 text-slate-500 z-10 w-max" : ""}`}
+>
+  <ul className="flex items-center space-x-6 font-semibold">
           {optionMenu.map((option) => (
             <li key={option.id}>
               <a className="flex items-center gap-2" href={option.path}>

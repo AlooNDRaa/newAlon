@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import Doodle from '../doodle/1.png'
 import ClipboardCopyButton from './ClipBoards';
 
-const AboutMe = () => {
+const Home = () => {
   return (
     <div className="bg-slate-200 min-h-screen flex items-center justify-center">
       <div 
@@ -38,4 +38,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default Home;
